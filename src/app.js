@@ -56,7 +56,7 @@ app.get('/weather',(req,res) => {
                 return res.send({error});
             }
             
-            res.send({forecast:`It is currently ${forecast.currently.temperature} degrees in ${location_name}. There is a ${forecast.currently.precipProbability} percent chance of precipatation. Summary of weather: ${ forecast.hourly.summary}`,
+            res.send({forecast:`It is currently ${forecast.currently.temperature} degrees fahrenheit in ${location_name}. There is a ${forecast.currently.precipProbability} percent chance of precipatation. Summary of weather: ${ forecast.hourly.summary}`,
                 address: req.query.address, location_name}); 
 
         })
